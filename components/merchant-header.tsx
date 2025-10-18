@@ -24,8 +24,10 @@ export function MerchantHeader() {
 
   useEffect(() => {
     const getUser = async () => {
-      const { data: { user } } = await supabase.auth.getUser()
-      setUser(user)
+      if (process.env.NEXT_PUBLIC_SUPABASE_URL) {
+        const { data: { user } } = await supabase.auth.getUser()
+        setUser(user)
+      }
     }
     getUser()
   }, [])
