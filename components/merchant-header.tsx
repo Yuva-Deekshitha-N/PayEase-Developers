@@ -35,7 +35,8 @@ export function MerchantHeader() {
   const handleLogout = async () => {
     setLoggingOut(true)
     try {
-      await fetch("/api/auth/logout", { method: "POST" })
+      await supabase.auth.signOut()
+      window.location.href = "/home"
     } catch (error) {
       console.error("Logout failed:", error)
     }
@@ -91,7 +92,7 @@ export function MerchantHeader() {
           {/* Footer */}
           <div className="space-y-2 border-t border-border/40 pt-4">
             <div className="text-xs text-foreground/60 px-4">
-              <p className="font-medium">Welcome {user?.user_metadata?.full_name || user?.user_metadata?.name || 'User'}</p>
+              <p className="font-medium">{user?.user_metadata?.full_name || user?.user_metadata?.name || 'User'}</p>
               <p className="font-mono text-xs mt-1">{user?.email || 'No email'}</p>
             </div>
             <Button

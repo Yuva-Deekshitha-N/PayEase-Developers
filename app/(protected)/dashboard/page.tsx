@@ -30,7 +30,7 @@ export default function DashboardPage() {
   return (
     <div className="space-y-8 p-8">
       <div>
-        <h1 className="text-3xl font-bold text-foreground">Welcome back, {user?.email}</h1>
+        <h1 className="text-3xl font-bold text-foreground">Welcome back, {user?.user_metadata?.full_name || user?.user_metadata?.name || 'User'}</h1>
         <p className="text-muted-foreground">Here's your transaction settlement overview</p>
       </div>
 

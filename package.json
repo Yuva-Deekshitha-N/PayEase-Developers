@@ -3,17 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-  "dev": "set NODE_OPTIONS=--max-old-space-size=4096 && next dev",
-  "build": "next build",
-  "start": "set NODE_OPTIONS=--max-old-space-size=4096 && next start",
-  "lint": "eslint ."
-},
+    "dev": "set NODE_OPTIONS=--max-old-space-size=4096 && next dev",
+    "build": "next build",
+    "start": "set NODE_OPTIONS=--max-old-space-size=4096 && next start",
+    "lint": "eslint ."
+  },
   "dependencies": {
     "@agoralabs-sh/avm-web-provider": "^1.7.0",
     "@blockshake/defly-connect": "latest",
     "@hookform/resolvers": "^3.10.0",
     "@magic-ext/algorand": "latest",
-
     "@radix-ui/react-accordion": "1.2.2",
     "@radix-ui/react-alert-dialog": "1.1.4",
     "@radix-ui/react-aspect-ratio": "1.1.1",
@@ -44,7 +43,7 @@
     "@reclaimprotocol/js-sdk": "latest",
     "@supabase/ssr": "latest",
     "@supabase/supabase-js": "latest",
-
+    "@txnlab/use-wallet-react": "^4.3.1",
     "@vercel/analytics": "latest",
     "@walletconnect/modal": "latest",
     "@walletconnect/sign-client": "latest",
